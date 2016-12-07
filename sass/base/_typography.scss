@@ -1,6 +1,6 @@
 
-
-@include font-face("a_grotic", font-files("a_grotic.ttf", "a_grotic.eot","a_grotic.svg"));
+@include font-face("a_avantetck_medium", font-files("a_avantetck_medium.ttf", "a_avantetck_medium.eot","a_avantetck_medium.svg","a_avantetck_medium.woff"));
+@include font-face("a_grotic", font-files("a_grotic.ttf", "a_grotic.eot","a_grotic.svg","a_grotic.woff"));
 @include establish-baseline;
 body{
 	font-family: $base-font;	
