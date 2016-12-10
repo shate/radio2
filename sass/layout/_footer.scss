@@ -1,5 +1,58 @@
 footer {
 	background-color: $footer-color;
 	height: $footerH;
-	
+	box-sizing: border-box;
+	padding-top: 40px;
+	min-width: 1000px;
+	position: relative;
+	article{
+		&:nth-child(1){
+			@include span(4);
+		}
+		&:nth-child(2){
+			@include span(5);
+		}
+		&:nth-child(3){
+			color:#e6e6e6;
+			text-align: right;
+			@include span(3 last);
+		}
+	}
+	.copyright{
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 13px;
+		color: #5297c6;
+		margin-top: -10px;
+	}
+	.logo{
+		font-size: 18px;
+		color:#e6e6e6;
+		text-transform: uppercase;
+		outline: none;
+		letter-spacing: 0.04em;
+		span{
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 13px;
+			display: block;
+			text-transform: none;
+			margin-top: -5px;
+			letter-spacing: 0;
+		}
+	}
+	.phone-number{
+		font-size: 18px;
+	}
+	.header_nav{
+		padding-top: 0;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: 100;
+		@include ico-sprite(coner);
+		left: 50%;
+		margin-left: -19px;
+		top: 0;
+		width: 33px;
+	}
 }

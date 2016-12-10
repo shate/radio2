@@ -13,19 +13,7 @@
   }
 }
 
-//--------------------------------
-// Photoshop Text Shadow
-//--------------------------------
-@mixin text-shadow ($angle: 0, $distance: 0, $spread: 0, $size: 0, $color: #000) {
-  // NOTE: $spread has no effect for text shadows
-  $angle: (180 - $angle) * pi() / 180;
-  $h-shadow: round(cos($angle) * $distance);
-  $v-shadow: round(sin($angle) * $distance);
-  $css-spread: $size * $spread/100;
-  $blur: ($size - $css-spread);
-  
-  @include text-shadow($h-shadow $v-shadow $blur $color);
-}
+
 /// Mixin to manage responsive breakpoints
 /// @author Hugo Giraudel
 /// @param {String} $breakpoint - Breakpoint name

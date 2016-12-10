@@ -7,10 +7,9 @@ html,body{
 	margin:0 auto (-$footerH);
 	min-height:100%;
 	overflow: hidden;
+  min-width: 1000px;
 }
-.contacts{
-	background-color: #ccc;
-}
+
 .cf:before,
 .cf:after {
     content: " "; 
@@ -28,4 +27,236 @@ html,body{
     background-image: url('../img/#{$pic-name}.#{$type}');
     background-repeat: no-repeat;
   }
+}
+.bg-1{
+  min-height: 490px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+
+}
+.bg-graf {
+  min-height: 490px;
+  background-position: center center;
+  background-size: auto 100%;
+  padding-top: 140px;
+}
+.bg-2{
+  min-height: 638px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 75px;
+}
+.bg-3{
+   min-height: 514px;
+   -webkit-background-size: cover;
+   background-size: cover;
+   background-position: center center;
+  padding-top: 35px;
+ }
+.bg-4{
+  min-height: 964px;
+  padding-top: 60px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  h2::first-letter{
+    font-size: 38px;
+
+  }
+
+}
+.bg-5{
+  min-height: 403px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 35px;
+   h3{
+     color: #29a6cf;
+   }
+}
+.bg-6{
+  min-height: 755px;
+  padding-top: 75px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+
+}
+  .border{
+  height: 6px;
+  @include background-image(linear-gradient(#54836b, #57886c));
+}
+  .two-columns{
+    article{
+      @include span(6);
+      &:last-child{
+        @include span(6 last);
+      }
+    }
+  }
+  .about{
+    h4{
+      color: #fff;
+    }
+    i{
+      display: block;
+      margin: auto;
+    }
+    p{
+      text-align: center;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    article{
+      &:first-child{
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          display: block;
+          width: 3px;
+          background-image: url(../img/v-dotted.png);
+          background-repeat: repeat-y;
+          top: 55px;
+          right: -10px;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+  ul.pr-list{
+    text-align: center;
+    margin-bottom: 55px;
+    li{
+      display: inline-block;
+      vertical-align: top;
+      height: 220px;
+      width: 196px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 3px;
+        background-image: url(../img/v-dotted.png);
+        background-repeat: repeat-y;
+        top: 0;
+        right: -2px;
+        bottom: 0;
+      }
+      &:last-child:after{
+        display: none;
+      }
+      h4, p{
+        color: #23819b;
+      }
+      i{
+        margin-bottom: -5px;
+      }
+      h4{
+        margin-bottom: 5px;
+      }
+    }
+  }
+.ico-cirkcles{
+  padding-top: 34px;
+  text-align: center;
+}
+figure{
+  display: inline-block;
+  float: left;
+  border: 3px solid #44b3d2;
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  line-height: 0;
+  .description{
+    background-color: rgba(#1f6185, .9);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: table;
+    width: 100%;
+    p{
+      font-family: "a_avantetck_medium";
+      font-size: 15px;
+      display: table-cell;
+      margin-bottom: 0;
+      vertical-align: middle;
+      padding-left: 15px;
+    }
+  }
+  &:nth-child(3n),&:last-child{
+    margin-right: 0;
+  }
+
+}
+.banner{
+  a{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    &:nth-child(6n),&:last-child{
+      margin-right: 0;
+
+    }
+  }
+  img{
+
+    border: 4px solid #8fc7d3;
+
+  }
+}
+.cont-list{
+  text-align: center;
+  position: relative;
+  margin-bottom: 35px;
+  margin-top: 40px;
+  li{
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+    .ico-cirkcles-sm{
+      padding-top: 32px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    p,a{
+      font-family:"a_avantetck_medium";
+      font-size: 19px;
+      color: #23819b;
+    }
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    background-image: url(../img/dotted.png);
+    background-repeat: repeat-x;
+    left: 250px;
+    right: 250px;
+    bottom: -8px;
+    
+
+  }
+}
+p.title{
+  text-align: center;
+  color: #23819b;
+  font-size: 18px;
+  padding: 0 260px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.btn-wrap{
+  text-align: center;
 }

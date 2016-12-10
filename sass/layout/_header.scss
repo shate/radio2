@@ -1,18 +1,78 @@
 header {
 	height: $headrH;
-	background-color: $header-color;
-	
-	.logo{		
-	    text-indent: -9999px;
-	     outline: none;	     
+	padding-top: 35px;
+	box-sizing: border-box;
+	@include background-image(linear-gradient(#274152, #2e4a59));
 
+	.logo{
+		font-size: 21px;
+		color:#e6e6e6;
+		text-transform: uppercase;
+		outline: none;
+		letter-spacing: 0.04em;
+		span{
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 13px;
+			display: block;
+			text-transform: none;
+			margin-top: -5px;
+			letter-spacing: 0;
+		}
 	}
 	article{
-		&:first-child{
-			@include span(2);
+		&:nth-child(1){
+			@include span(4);
 		}
-		&:last-child{
-			@include span(10 last);
+		&:nth-child(2){
+			@include span(5);
 		}
+		&:nth-child(3){
+			color:#e6e6e6;
+			text-align: right;
+			@include span(3 last);
+		}
+	}
+	.phone-number{
+		text-transform: uppercase;
+		font-size: 21px;
+		letter-spacing: 0.02em;
+		margin-bottom: 0;
+
+	}
+	.worck-time{
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 13px;
+		color: #d7d7d7;
+		margin-top: 5px;
+		letter-spacing: -0.02em;
+		span{
+			font-size: 14px;
+		}
+		sup{
+			font-size: 10px;
+		}
+	}
+	i{
+		margin-right: 5px;
+	}
+}
+
+.phone-number{
+	text-transform: uppercase;
+	font-size: 21px;
+	letter-spacing: 0.02em;
+
+}
+.worck-time{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 13px;
+	color: #d7d7d7;
+	margin-top: -5px;
+	letter-spacing: -0.02em;
+	span{
+		font-size: 14px;
+	}
+	sup{
+		font-size: 10px;
 	}
 }

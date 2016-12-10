@@ -1,8 +1,33 @@
 nav {
 	
 }
-ul.header_nav {	
-	@include horizontal-list(10px);
+ul.header_nav {
+	text-align: center;
+	padding-top: 10px;
+	li{
+		display: inline-block;
+		padding: 0 20px;
+		position: relative;
+		&:after{
+			content: '.';
+			font-size: 30px;
+			position: absolute;
+			right: -6px;
+			top: -7px;
+		}
+		a{
+			font-family: "a_avantetck_medium";
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+		&:last-child{
+			&:after{
+				content: '';
+			}
+		}
+	}
+
+
 }
 
 
